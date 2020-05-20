@@ -164,7 +164,7 @@ public class WorldGuardPlayerListener implements Listener {
 
             if (!chatFrom.testState(localPlayer, Flags.SEND_CHAT)) {
                 String message = chatFrom.queryValue(localPlayer, Flags.DENY_MESSAGE);
-                RegionProtectionListener.formatAndSendDenyMessage("chat", localPlayer, message);
+                RegionProtectionListener.formatAndSendDenyMessage("pisać", localPlayer, message);
                 event.setCancelled(true);
                 return;
             }
@@ -441,7 +441,7 @@ public class WorldGuardPlayerListener implements Listener {
 
             if (!test.apply(event.getMessage())) {
                 String message = set.queryValue(localPlayer, Flags.DENY_MESSAGE);
-                RegionProtectionListener.formatAndSendDenyMessage("use " + event.getMessage(), localPlayer, message);
+                RegionProtectionListener.formatAndSendDenyMessage("używać " + event.getMessage(), localPlayer, message);
                 event.setCancelled(true);
                 return;
             }
