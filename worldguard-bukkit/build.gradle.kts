@@ -31,6 +31,10 @@ dependencies {
     "implementation"("org.bstats:bstats-bukkit:1.7")
 }
 
+tasks.withType<JavaCompile>().configureEach {
+    options.encoding = "UTF-8"
+}
+
 tasks.named<Upload>("install") {
     (repositories as HasConvention).convention.getPlugin<MavenRepositoryHandlerConvention>().mavenInstaller {
         pom.whenConfigured {
